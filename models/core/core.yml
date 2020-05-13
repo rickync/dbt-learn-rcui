@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_orders
+    description: order dimension table
+
+    columns:
+      - name: order_id
+        description: order id
+        tests:
+            - not_null
+
+      - name: customer_id
+        description: customer id
+        tests:
+            - not_null
+
+  - name: fct_customers
+    description: order dimension table
+
+    columns:
+      - name: customer_id
+        description: customer id
+        tests:
+            - unique
+            - not_null
+
+      - name: first_name
+        description: customers first name
+
+      - name: last_name
+        description: customers first name
+
